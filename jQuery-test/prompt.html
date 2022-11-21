@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prompt</title>
+    <style>
+        button{width: 150px; height: 50px; cursor: pointer; margin-bottom: 30px;}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $('button').on("click",function(){
+                var result = prompt('원하는 말을 입력하세요');
+
+                if(result !=""){
+                    $('#result').text(result);
+                }else{
+                    alert('입력 하세요!!!!!!!')
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>prompt 연습</h1>
+    <button>입력하기</button>
+    <p id="result"></p>
+</body>
+</html>

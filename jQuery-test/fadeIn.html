@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fadeIn</title>
+    <style>
+        button{width: 150px; height: 50px; cursor: pointer;}
+        h3{display: none;}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $('button').on("click",function(){
+                $('h3').fadeIn(1000,function(){
+                    $(this).css("color","pink");
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>fadeIn 연습</h1>
+    <button>보여라</button>
+    <h3>윙가르디움 레비오우사</h3>
+</body>
+</html>

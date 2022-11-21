@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>appendTo</title>
+    <style>
+        button{width: 150px; height: 50px; cursor: pointer;}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $('button').on("click",function(){
+                $('span').appendTo('p');
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>appendTo 연습</h1>
+    <button>Click me!</button>
+    <h2>클릭을 해보세요!!!!!</h2>
+    <p>내이름은</p>
+    <span>박서연</span>
+</body>
+</html>

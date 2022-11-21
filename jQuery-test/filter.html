@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter</title>
+    <style>
+        button{width: 150px; height: 50px; cursor: pointer; margin-bottom: 30px;}
+        li{list-style: none;}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $('button').on("click",function(){
+                $('ol>li').filter(':even').css("color","hotpink",);
+                $('ol>li').filter(':odd').hide();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>filter 연습</h1>
+    <button>filtering!!!</button>
+    <ol>
+        <li>나는 1</li>
+        <li>나는 2</li>
+        <li>나는 3</li>
+        <li>나는 4</li>
+        <li>나는 5</li>
+        <li>나는 6</li>
+        <li>나는 7</li>
+        <li>나는 8</li>
+    </ol>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>each</title>
+    <style>
+        .p1{background-color: yellowgreen;}
+        .p2{background-color: gold;}
+        .p3{background-color: thistle;}
+        .p4{background-color: hotpink;}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            var i=1;
+            $('p').each(function() {
+                $(this).addClass('p'+i);
+                i = i + 1;
+                if(i == 4){ //i=3일때 실행 종료됨 (.p4는 화면에 스타일 적용 안 됨.)
+                    return false;
+                }
+            });
+            console.log(i);
+        });
+    </script>
+</head>
+<body>
+    <h1>each 연습</h1>
+    <p>안녕</p>
+    <p>안녕하세요</p>
+    <p>감사</p>
+    <p>고맙</p>
+</body>
+</html>
